@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {useNavigate, useParams, Link} from "react-router-dom";
 import axios from "axios";
-
+import '../App.css';
 const ViewWorkout = (props) => {
 
     const id = useParams();

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
 import { useNavigate, Link } from "react-router-dom";
+import '../App.css';
 
 const CreateWorkout = (props) => {
 
@@ -94,8 +95,8 @@ const CreateWorkout = (props) => {
     <   div className="CreateWorkout">
             <h1>Create Workout</h1>
             
-            <Link to={"/dashboard"}>Home</Link>
-            <Link to={"/"} onClick={handleLogout}>Logout</Link>
+            <Link className ="link" to={"/dashboard"}>Home</Link>
+            <Link className ="link" to={"/"} onClick={handleLogout}>Logout</Link>
 
             <form onSubmit={submitHandler}>
 

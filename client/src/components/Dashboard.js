@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import { useNavigate, navigate, Link } from "react-router-dom";
+import '../App.css';
 
 function Dashboard(props) {
     const navigate = useNavigate();
@@ -42,12 +43,12 @@ function Dashboard(props) {
     return (
     <   div className="Dashboard">
             <h1>Welcome {props.user?.firstName}</h1>
-            <Link to={"/"} onClick={handleLogout}>Logout</Link>
-            <Link to={"/create"}>Create Workout</Link>
+            <Link className="link" to={"/"} onClick={handleLogout}>Logout</Link>
+            <Link className="link" to={"/create"}>Create Workout</Link>
 
             {
                 workoutList.map((workout, index) => (
-                    <div key = {index}>
+                    <div key = {index}className='workout'>
                         <h3>{workout.workoutName}</h3>
                         {/* <Link to={`/note/edit/${note._id}`}>
                             Edit

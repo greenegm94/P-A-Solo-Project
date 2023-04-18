@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from 'axios';
 import { useNavigate, navigate, Link } from "react-router-dom";
+import '../App.css';
 
 const CreateExercise = (props) => {
 
@@ -43,9 +44,9 @@ const CreateExercise = (props) => {
 
     return (
         <   div className="CreateExercise">
-                <Link to={"/dashboard"}>Home</Link>
-                <Link to={"/"} onClick={handleLogout}>Logout</Link>
                 <h1>Create Exercise</h1>
+                <Link className="link" to={"/dashboard"}>Home</Link>
+                <Link className="link" to={"/"} onClick={handleLogout}>Logout</Link>
     
                 <form onSubmit={submitHandler}>
     

@@ -87,6 +87,16 @@ input {
   margin-left: 20px;
 }
 
-Link {
-  align-items: center;
+.link {
+  margin: 10px;
+}
+
+h1 {
+  border-bottom: 2px solid black;
+}
+
+.workout {
+  background-color: lightgreen;
+  margin: 20px;
+  border: 2px solid black;
 }
