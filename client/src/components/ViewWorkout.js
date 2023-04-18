@@ -62,24 +62,22 @@ const ViewWorkout = (props) => {
             </div>}
 
             {editWorkout === true && <div>
-                <h1>
-                    <div className="form-fields">
-                        <label>Workout Name: </label>
-                        <input
-                            onChange={(e) => setName(e.target.value)}
-                            value={name}
-                            name="name"
-                            type="text"
-                        />
-                    </div>
-                    <button onClick={() => saveWorkout()}>Save</button>
-                </h1>
+                <div className="form-fields">
+                    <label>Workout Name: </label>
+                    <input
+                        onChange={(e) => setName(e.target.value)}
+                        value={name}
+                        name="name"
+                        type="text"
+                    />
+                </div>
+                <button onClick={() => saveWorkout()}>Save</button>
             </div>}
             <hr/>
             <Link to={"/dashboard"}>Home</Link>
 
             {workout.exercises.map((exercise) => 
-                <div>
+                <div className="workoutItem">
                     {exerciseList?.find(ex => ex._id === exercise.exerciseId).exerciseName}
                     <div>Weight (lbs): {exercise.weight}</div>
                     <div>Reps: {exercise.reps}</div>

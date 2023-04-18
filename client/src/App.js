@@ -12,7 +12,7 @@ function App() {
   const [user, setUser] = useState();
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter className="App">
         <Routes>
           <Route exact path ="/" element = {<LoginRegister setUser={setUser}/>}/>
           <Route exact path ="/dashboard" element = {<Dashboard user={user} setUser={setUser}/>}/>

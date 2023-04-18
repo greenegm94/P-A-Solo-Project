@@ -119,40 +119,46 @@ const CreateWorkout = (props) => {
                 {addedExercises.map((exercise) => 
                     <div>
                         {exercise.exerciseName}
-                        <label>Weight (pounds)</label>
-                        <input
-                            onChange={(e) => {
-                                let newWeight = weight;
-                                newWeight[addedExercises.indexOf(exercise)] = e.target.value;
-                                setweight(newWeight);
-                            }}
-                            name="weight"
-                            type="number"
-                        />
-                        <label>Number of Reps</label>
-                        <input
-                            onChange={(e) => {
-                                let newReps = reps;
-                                newReps[addedExercises.indexOf(exercise)] = e.target.value;
-                                setreps(newReps);
-                            }}
-                            name="reps"
-                            type="number"
-                        />
-                        <label>Rest Time (seconds)</label>
-                        <input
-                            onChange={(e) => {
-                                let newRestTime = restTime;
-                                newRestTime[addedExercises.indexOf(exercise)] = e.target.value;
-                                setresttime(newRestTime);
-                            }}
-                            name="restTime"
-                            type="number"
-                        />
                         <button onClick={() => {
                             let newList = addedExercises.filter((ex) => ex !== exercise);
                             setAddedExercises(newList);
                         }}>Delete</button>
+                        <div>
+                            <label>Weight (pounds)</label>
+                            <input
+                                onChange={(e) => {
+                                    let newWeight = weight;
+                                    newWeight[addedExercises.indexOf(exercise)] = e.target.value;
+                                    setweight(newWeight);
+                                }}
+                                name="weight"
+                                type="number"
+                            />
+                        </div>
+                        <div>
+                            <label>Number of Reps</label>
+                            <input
+                                onChange={(e) => {
+                                    let newReps = reps;
+                                    newReps[addedExercises.indexOf(exercise)] = e.target.value;
+                                    setreps(newReps);
+                                }}
+                                name="reps"
+                                type="number"
+                            />
+                        </div>
+                        <div>
+                            <label>Rest Time (seconds)</label>
+                            <input
+                                onChange={(e) => {
+                                    let newRestTime = restTime;
+                                    newRestTime[addedExercises.indexOf(exercise)] = e.target.value;
+                                    setresttime(newRestTime);
+                                }}
+                                name="restTime"
+                                type="number"
+                            />
+                        </div>
                     </div>
                 )}
 

@@ -1,5 +1,8 @@
 .App {
   text-align: left;
+  background-color: #87AE73;
+  padding: 10px;
+  min-height: 800px;
 }
 
 .App-logo {
@@ -37,11 +40,14 @@
   }
 }
 
-div{
+.form-fields{
   padding-top: 10px;
   padding-right: 50px;
   padding-bottom: 20px;
   padding-left: 20px;
+/* 
+  padding: 10px;
+  border: 2px solid black; */
 }
 
 p {
@@ -49,7 +55,7 @@ p {
   width: 500px;
   box-sizing: border-box;
   padding: 20px;
-  background-color: lightgreen;
+  background-color: #4a6741;
   border: 2px solid black;
   margin: 10px;
 }
@@ -57,7 +63,7 @@ p {
 form {
   width: 600px;
   height: 700px;
-  background-color: lightgreen;
+  background-color: #4a6741;
   /* display: flex; */
   align-items: center;
   justify-content: space-evenly;
@@ -92,11 +98,17 @@ input {
 }
 
 h1 {
-  border-bottom: 2px solid black;
+  /* border-bottom: 2px solid black; */
 }
 
 .workout {
-  background-color: lightgreen;
+  background-color: #4a6741;
   margin: 20px;
+  border: 2px solid black;
+}
+
+.workoutItem {
+  background-color: #4a6741;
+  margin-top: 10px;
   border: 2px solid black;
 }
